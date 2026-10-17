@@ -1,4 +1,5 @@
 #include "Platform.h"
+#include <iostream>
 
 #ifdef _WIN32
     #include <conio.h>
@@ -7,7 +8,7 @@
     #include <termios.h>
     #include <unistd.h>
     #include <locale.h>
-    #include <iostream>
+    #include <locale>
 #endif
 
 void clearScreen() 
@@ -45,9 +46,24 @@ void setupLocale()
     SetConsoleCP(CP_UTF8);
     SetConsoleOutputCP(CP_UTF8);
 #else
-    setlocale(LC_ALL, "pl_PL.UTF-8");
-    std::locale::global(std::locale("pl_PL.UTF-8"));
+    if (setlocale(LC_ALL, "pl_PL.UTF-8") != nullptr) {
+        std::locale::global(std::locale("pl_PL.UTF-8"));
+    } else {
+        // A UTF-8 system locale also works when the Polish locale is absent.
+        setlocale(LC_ALL, "");
+        try {
+            std::locale::global(std::locale(""));
+        } catch (const std::runtime_error&) {
+            std::locale::global(std::locale::classic());
+        }
+    }
 #endif
+}
+
+void waitForKey()
+{
+    std::cout << "\nNaciśnij dowolny klawisz, aby kontynuować..." << std::flush;
+    getchWrapper();
 }
 
 

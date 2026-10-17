@@ -1,0 +1,6 @@
+old-town
+old-town.exe
+build/
+*.o
+*.obj
+.DS_Store

@@ -4,7 +4,7 @@ bool Walka::rozpocznijWalke(Player& player, Istota& przeciwnik)
 {
     while(player.isAlive() && przeciwnik.isAlive()) 
     {
-        system("cls");
+        clearScreen();
         printf("\nTwoja tura!\n");
         printf("HP: %d/%d  Mana: %d/%d\n", 
                player.getStats().getCurrentHp(), player.getStats().getMaxHp(),
@@ -41,7 +41,7 @@ bool Walka::rozpocznijWalke(Player& player, Istota& przeciwnik)
                 printf("\nZwyciężyłeś!\n");
                 printf("Znaleziono %d złota!\n", goldReward);
                 printf("Zdobyto %d doświadczenia!\n", expGain);
-                system("pause");
+                waitForKey();
                 return true;
             }
         }
@@ -66,7 +66,7 @@ bool Walka::rozpocznijWalke(Player& player, Istota& przeciwnik)
                     int expGain = 5 + expDice.rzut();
                     player.getStats().addExperience(expGain);
                     printf("\nZdobyto %d doświadczenia!\n", expGain);
-                    system("pause");
+                    waitForKey();
                     return true;
                 }
             }
@@ -82,7 +82,7 @@ bool Walka::rozpocznijWalke(Player& player, Istota& przeciwnik)
                 if(player.getStats().isDead()) 
                 {
                     printf("\nGAME OVER!\n");
-                    system("pause");
+                    waitForKey();
                     return false;
                 }
             }
@@ -94,7 +94,7 @@ bool Walka::rozpocznijWalke(Player& player, Istota& przeciwnik)
                 if (escapeChance.rzut() <= 4) 
                 {
                     printf("\nO nie! Banished One uciekł...\n");
-                    system("pause");
+                    waitForKey();
                     return true;
                 }
             }
@@ -126,7 +126,7 @@ bool Walka::rozpocznijWalke(Player& player, Istota& przeciwnik)
                 }
             }
 
-            system("pause");
+            waitForKey();
         }
     }
     return player.isAlive();

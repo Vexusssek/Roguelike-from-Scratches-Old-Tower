@@ -322,7 +322,7 @@ void Game::showEnding()
 {
     clearScreen();
     printf("=====================================\n");
-    printf("         Old Tower Mystery           \n");
+    printf("         Old Town           \n");
     printf("=====================================\n\n");
     
     printf("Po długiej, pełnej niebezpieczeństw podróży dotarłeś do szczytu wieży.\n");
@@ -331,5 +331,5 @@ void Game::showEnding()
     printf("wreszcie ujrzały światło dzienne, a Ty stałeś się legendą wśród magów.\n\n");
     
     printf("Koniec gry.\n");
-    system("pause");
+    waitForKey();
 }

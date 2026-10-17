@@ -17,3 +17,5 @@
 void clearScreen();
 int getchWrapper();
 void setupLocale();
+
+void waitForKey();
