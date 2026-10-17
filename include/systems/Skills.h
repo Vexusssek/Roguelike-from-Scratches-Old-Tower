@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include "Kostka.h"
+#include "systems/Kostka.h"
 
 class Skill 
 {

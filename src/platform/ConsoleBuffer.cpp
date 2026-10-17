@@ -1,4 +1,4 @@
-#include "ConsoleBuffer.h"
+#include "platform/ConsoleBuffer.h"
 #include <cstdio>
 
 #ifdef _WIN32

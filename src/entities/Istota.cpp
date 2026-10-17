@@ -1,4 +1,4 @@
-#include "Istota.h"
+#include "entities/Istota.h"
 #include <algorithm>
 
 Istota::Istota(std::string name, char symbol, int x, int y, int hp, int attack, int defense)

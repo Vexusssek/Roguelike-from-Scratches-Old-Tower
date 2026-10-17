@@ -1,4 +1,4 @@
-#include "Potwor.h"
+#include "entities/Potwor.h"
 #include <cstdio>
 
 Potwor::Potwor(std::string name, char symbol, int hp, int attack, int defense, 

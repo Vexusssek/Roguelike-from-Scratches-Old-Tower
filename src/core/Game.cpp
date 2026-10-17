@@ -1,6 +1,6 @@
-#include "Game.h"
-#include "Walka.h"
-#include "Platform.h"
+#include "core/Game.h"
+#include "systems/Walka.h"
+#include "platform/Platform.h"
 #include <thread>
 #include <chrono>
 

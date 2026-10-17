@@ -1,6 +1,8 @@
 old-tower
 old-tower.exe
 build/
+build-*/
+CMakeUserPresets.json
 *.o
 *.obj
 .DS_Store

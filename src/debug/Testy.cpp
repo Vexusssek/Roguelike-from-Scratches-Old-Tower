@@ -1,4 +1,4 @@
-#include "Testy.h"
+#include "debug/Testy.h"
 
 // Zmienna globalna testMap – upewnij się, że nie koliduje z innymi częściami programu
 Map* testMap = nullptr;

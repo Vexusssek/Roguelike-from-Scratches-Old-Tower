@@ -1,4 +1,4 @@
-#include "Przedmiot.h"
+#include "systems/Przedmiot.h"
 
 Przedmiot::Przedmiot(std::string name, char symbol, int x, int y) 
     : name(name), symbol(symbol), x(x), y(y), cost(0), effectDescription("") {}

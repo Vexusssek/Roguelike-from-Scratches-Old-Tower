@@ -2,10 +2,10 @@
 #include <string>
 #include <vector>
 #include <unordered_map>
-#include "Istota.h"
-#include "Przedmiot.h"
-#include "Potwory.h"
-#include "Shop.h"
+#include "entities/Istota.h"
+#include "systems/Przedmiot.h"
+#include "entities/Potwory.h"
+#include "systems/Shop.h"
 
 enum RoomType 
 {

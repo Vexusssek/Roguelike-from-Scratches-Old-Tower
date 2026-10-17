@@ -1,8 +1,8 @@
 #ifndef TESTY_H
 #define TESTY_H
 
-#include "Map.h"
-#include "Potwory.h"
+#include "world/Map.h"
+#include "entities/Potwory.h"
 #include <iostream>
 
 class Testy {

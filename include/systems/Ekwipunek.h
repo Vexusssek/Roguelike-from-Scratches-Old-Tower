@@ -1,5 +1,5 @@
 #pragma once
-#include "Przedmiot.h"
+#include "systems/Przedmiot.h"
 #include <vector>
 #include <string>
 

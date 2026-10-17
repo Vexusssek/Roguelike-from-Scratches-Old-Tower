@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 #include <string>
-#include "Przedmiot.h"
+#include "systems/Przedmiot.h"
 
 class Map;
 class Player;

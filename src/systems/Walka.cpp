@@ -1,4 +1,4 @@
-#include "Walka.h"
+#include "systems/Walka.h"
 
 bool Walka::rozpocznijWalke(Player& player, Istota& przeciwnik) 
 {

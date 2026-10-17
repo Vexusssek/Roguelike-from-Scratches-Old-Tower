@@ -1,4 +1,4 @@
-#include "Potwory.h"
+#include "entities/Potwory.h"
 #include <cstdio>
 
 Potwory::Potwory() 

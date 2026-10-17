@@ -1,8 +1,8 @@
-#include "Shop.h"
-#include "Przedmiot.h"
-#include "Map.h"
-#include "Player.h"
-#include "Platform.h"
+#include "systems/Shop.h"
+#include "systems/Przedmiot.h"
+#include "world/Map.h"
+#include "entities/Player.h"
+#include "platform/Platform.h"
 #include <cstdlib>
 #include <cstdio>
 

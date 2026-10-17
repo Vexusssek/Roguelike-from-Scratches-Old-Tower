@@ -37,25 +37,41 @@ Zrzuty pochodzą z działającej wersji konsolowej. Wygląd znaków może zależ
 
 ## Uruchomienie
 
-Wymagania: kompilator z obsługą **C++17** oraz terminal UTF-8. Gra ma implementacje obsługi konsoli dla Windows i systemów uniksowych.
+Wymagania: **CMake 3.16+**, kompilator z obsługą **C++17** (GCC, Clang lub MinGW-w64) i terminal UTF-8.
 
-### Linux / macOS z GCC lub Clang
+### Budowanie przez CMake
 
 W katalogu projektu:
 
 ```bash
-g++ -std=c++17 -O2 -pthread *.cpp -o old-tower
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build --config Release
+```
+
+Linux / macOS:
+
+```bash
+./build/old-tower
+```
+
+Windows z generatorem MinGW Makefiles:
+
+```powershell
+cmake -S . -B build -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release
+cmake --build build
+.\build\old-tower.exe
+```
+
+CMake kompiluje moduły z `src/` i udostępnia nagłówki z `include/`. Zrzuty ekranu i GIF są w `docs/images/`.
+
+### Bez CMake — Linux / macOS
+
+```bash
+g++ -std=c++17 -O2 -pthread -Iinclude src/main.cpp src/*/*.cpp -o old-tower
 ./old-tower
 ```
 
-### Windows z MinGW-w64
-
-```powershell
-g++ -std=c++17 -O2 *.cpp -o old-tower.exe
-.\old-tower.exe
-```
-
-Weryfikację kompilacji i materiały do README wykonano na Linuksie. Wersja Windows korzysta z WinAPI i funkcji konsolowych MinGW.
+Kompilację i materiały do README zweryfikowano na Linuksie. Kod obsługi konsoli dla Windows korzysta z WinAPI i funkcji MinGW; ten wariant nie był tutaj uruchamiany.
 
 ## Sterowanie
 
@@ -69,15 +85,18 @@ Weryfikację kompilacji i materiały do README wykonano na Linuksie. Wersja Wind
 
 ## Organizacja kodu
 
-| Element | Odpowiedzialność |
+Pliki implementacji znajdują się w `src/`, a odpowiadające im nagłówki w `include/`. Oba katalogi mają ten sam podział na moduły.
+
+| Katalog w `src/` i `include/` | Zawartość |
 | --- | --- |
-| `Game` | Pętla gry, wejście, zmiana pokoju i piętra |
-| `Map` | Mapa, pokoje, drzwi, obiekty i przeciwnicy |
-| `Player`, `Istota`, `Potwor` | Postacie i ich zachowanie |
-| `CharacterStats`, `Skills`, `Ekwipunek` | Statystyki, umiejętności i przedmioty |
-| `Walka`, `Shop` | Walka i zakupy |
-| `Platform`, `ConsoleBuffer` | Obsługa terminala dla różnych systemów |
-| `Testy` | Interaktywne scenariusze testowe |
+| `core/` | Główna pętla gry, wejście i zmiany stanu (`Game`) |
+| `entities/` | Gracz, istoty i przeciwnicy (`Player`, `Istota`, `Potwor`, `Potwory`) |
+| `world/` | Mapa, pokoje, drzwi i obiekty świata (`Map`) |
+| `systems/` | Walka, statystyki, losowania, umiejętności, przedmioty, ekwipunek i sklep |
+| `platform/` | Obsługa terminala na różnych systemach i bufor konsoli |
+| `debug/` | Interaktywny tryb testowy dostępny z menu gry (`Testy`) |
+
+`src/main.cpp` zawiera punkt wejścia i menu. `CMakeLists.txt` definiuje sposób budowania projektu, a `docs/images/` przechowuje materiały do tego README.
 
 ## Cel edukacyjny
 

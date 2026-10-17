@@ -1,9 +1,9 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include "Game.h"
-#include "Testy.h"
-#include "Platform.h"
+#include "core/Game.h"
+#include "debug/Testy.h"
+#include "platform/Platform.h"
 
 const char* introArt = R"(
    ___  _     ____    _____ _____        _______ ____

@@ -1,4 +1,4 @@
-#include "Kostka.h"
+#include "systems/Kostka.h"
 #include <cstdlib>
 
 int Kostka::rzut()

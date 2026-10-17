@@ -1,4 +1,4 @@
-#include "Ekwipunek.h"
+#include "systems/Ekwipunek.h"
 #include <cstdio>
 
 bool Ekwipunek::addItem(const Przedmiot& item) 

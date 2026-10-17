@@ -1,5 +1,5 @@
 #pragma once
-#include "Potwor.h"
+#include "entities/Potwor.h"
 #include <vector>
 
 class Potwory 

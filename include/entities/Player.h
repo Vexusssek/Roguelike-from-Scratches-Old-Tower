@@ -1,9 +1,9 @@
 #pragma once
-#include "Istota.h"
-#include "Ekwipunek.h"
-#include "CharacterStats.h"
-#include "Platform.h"
-#include "Skills.h"
+#include "entities/Istota.h"
+#include "systems/Ekwipunek.h"
+#include "systems/CharacterStats.h"
+#include "platform/Platform.h"
+#include "systems/Skills.h"
 #include <vector>
 
 class Player : public Istota 
