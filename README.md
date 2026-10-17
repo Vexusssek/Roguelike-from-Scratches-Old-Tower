@@ -7,7 +7,7 @@ Celem było samodzielne zbudowanie logiki gry — bez gotowego silnika ani frame
 
 ![Rzeczywisty zapis rozgrywki w terminalu](docs/images/gameplay.gif)
 
-*GIF przedstawia uruchomioną grę, przejście przez pokój startowy, eksplorację kolejnego pomieszczenia i walkę.*
+*GIF przedstawia uruchomioną grę, przejście przez pokój startowy i eksplorację kolejnego pomieszczenia. Osobny zrzut poniżej pokazuje walkę turową.*
 
 ## Co zostało zaimplementowane
 
