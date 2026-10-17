@@ -322,7 +322,7 @@ void Game::showEnding()
 {
     clearScreen();
     printf("=====================================\n");
-    printf("         Old Town           \n");
+    printf("         Old Tower           \n");
     printf("=====================================\n\n");
     
     printf("Po długiej, pełnej niebezpieczeństw podróży dotarłeś do szczytu wieży.\n");

@@ -1,4 +1,4 @@
-# Roguelike from Scratches — "Old Town"
+# Roguelike from Scratches — "Old Tower"
 
 Prosta, konsolowa gra roguelike napisana od podstaw w **C++** jako projekt akademicki.
 Celem było samodzielne zbudowanie logiki gry — bez gotowego silnika ani frameworka do tworzenia gier. Projekt korzysta z biblioteki standardowej C++ oraz systemowych funkcji obsługi terminala.
@@ -23,7 +23,7 @@ Celem było samodzielne zbudowanie logiki gry — bez gotowego silnika ani frame
 
 ### Ekran tytułowy
 
-![Ekran tytułowy Old Town](docs/images/title.png)
+![Ekran tytułowy Old Tower](docs/images/title.png)
 
 ### Eksploracja
 
@@ -44,15 +44,15 @@ Wymagania: kompilator z obsługą **C++17** oraz terminal UTF-8. Gra ma implemen
 W katalogu projektu:
 
 ```bash
-g++ -std=c++17 -O2 -pthread *.cpp -o old-town
-./old-town
+g++ -std=c++17 -O2 -pthread *.cpp -o old-tower
+./old-tower
 ```
 
 ### Windows z MinGW-w64
 
 ```powershell
-g++ -std=c++17 -O2 *.cpp -o old-town.exe
-.\old-town.exe
+g++ -std=c++17 -O2 *.cpp -o old-tower.exe
+.\old-tower.exe
 ```
 
 Weryfikację kompilacji i materiały do README wykonano na Linuksie. Wersja Windows korzysta z WinAPI i funkcji konsolowych MinGW.
